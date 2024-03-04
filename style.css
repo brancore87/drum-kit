@@ -1,15 +1,27 @@
 html {
   font-size: 10px;
-  background: url("./images/background.jpg") bottom center;
+  background: url("./images/background.jpg");
   background-size: cover;
-  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 body,
 html {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
 }
 
 .title__container {
@@ -17,6 +29,8 @@ html {
   justify-content: center;
   align-items: center;
   padding-top: 10px 0px;
+  position: absolute;
+  top: 0;
 }
 
 .title {
@@ -34,18 +48,19 @@ html {
 
 .keys {
   display: grid;
-  grid-template-columns: 80px 80px 80px 80px 80px 80px;
-  column-gap: 5rem;
+  grid-template-columns: 150px 150px 150px 150px 150px 150px;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 100px;
 }
 
 .key {
   border: 0.4rem solid black;
   border-radius: 0.5rem;
   margin: 1rem;
-  font-size: 1.5rem;
-  padding: 1rem 0.5rem;
+  font-size: 2.5rem;
+  padding: 2rem 2rem;
   transition: all 0.07s ease;
   width: 10rem;
   text-align: center;
@@ -76,9 +91,41 @@ kbd {
 .footer {
   display: flex;
   align-items: center;
-  width: 100vw;
+  font-size: 2rem;
+  width: 100%;
   justify-content: center;
-  position: absolute;
-  bottom: 10px;
-  color: white;
+  margin-top: 20px; /* Adjust this value as needed */
+  color: rgb(182, 182, 182);
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-width: 940px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .keys {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    column-gap: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .key {
+    border: 0.4rem solid black;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    font-size: 2.5rem;
+    padding: 0.5rem 0.5rem;
+    transition: all 0.07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 0.5rem black;
+    cursor: crosshair;
+  }
 }
