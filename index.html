@@ -2,61 +2,187 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>JS Drum Kit</title>
+    <title>BRANCODE | Drum Kit</title>
+    <meta
+      name="description"
+      content="Brancode Drum Kit is a simple basic virtual drum machine"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="https://fav.farm/🔥" />
+    <link rel="icon" href="images/drum-kit.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="title__container">
+      <h1 class="title">BRANCODE DRUM KIT</h1>
+      <img class="title__logo" src="images/drum-kit.svg" alt="drum-kit" />
+    </div>
     <div class="keys">
+      <!-- Crash -->
+      <div data-key="q" class="key">
+        <kbd>Q</kbd>
+        <span class="sound">crash</span>
+      </div>
+      <!-- High TOM -->
+      <div data-key="w" class="key">
+        <kbd>W</kbd>
+        <span class="sound">High Tom</span>
+      </div>
+      <!-- Mid Tom -->
+      <div data-key="e" class="key">
+        <kbd>E</kbd>
+        <span class="sound">Mid Tom</span>
+      </div>
+      <!-- Ride -->
+      <div data-key="r" class="key">
+        <kbd>R</kbd>
+        <span class="sound">ride</span>
+      </div>
+      <!-- Cowbell -->
+      <div data-key="t" class="key">
+        <kbd>T</kbd>
+        <span class="sound">cowbell</span>
+      </div>
+      <!-- Stick-->
+      <div data-key="y" class="key">
+        <kbd>Y</kbd>
+        <span class="sound">stick</span>
+      </div>
+      <!-- Closed Hi -Hat -->
       <div data-key="a" class="key">
         <kbd>A</kbd>
-        <span class="sound">clap</span>
+        <span class="sound">closed-hat</span>
       </div>
+      <!-- Open Hi-Hat -->
       <div data-key="s" class="key">
         <kbd>S</kbd>
-        <span class="sound">hihat</span>
+        <span class="sound">openhat</span>
       </div>
+      <!-- Snare -->
       <div data-key="d" class="key">
         <kbd>D</kbd>
-        <span class="sound">kick</span>
+        <span class="sound">snare</span>
       </div>
       <div data-key="f" class="key">
         <kbd>F</kbd>
-        <span class="sound">openhat</span>
-      </div>
-      <div data-key="g" class="key">
-        <kbd>G</kbd>
-        <span class="sound">boom</span>
-      </div>
-      <div data-key="h" class="key">
-        <kbd>H</kbd>
-        <span class="sound">ride</span>
-      </div>
-      <div data-key="j" class="key">
-        <kbd>J</kbd>
         <span class="sound">snare</span>
       </div>
-      <div data-key="k" class="key">
-        <kbd>K</kbd>
-        <span class="sound">tom</span>
+
+      <!-- Floor | Low Tom -->
+      <div data-key="g" class="key">
+        <kbd>G</kbd>
+        <span class="sound">Low Tom</span>
       </div>
-      <div data-key="l" class="key">
-        <kbd>L</kbd>
+      <!-- Clap -->
+      <div data-key="h" class="key">
+        <kbd>H</kbd>
+        <span class="sound">clap</span>
+      </div>
+
+      <!-- Boom -->
+      <div data-key="z" class="key">
+        <kbd>Z</kbd>
+        <span class="sound">boom</span>
+      </div>
+
+      <!-- Tink -->
+      <div data-key="x" class="key">
+        <kbd>X</kbd>
         <span class="sound">tink</span>
+      </div>
+
+      <!-- Kick -->
+      <div data-key="c" class="key">
+        <kbd>C</kbd>
+        <span class="sound">kick</span>
+      </div>
+      <div data-key="v" class="key">
+        <kbd>V</kbd>
+        <span class="sound">kick</span>
       </div>
     </div>
 
-    <audio data-key="a" src="sounds/clap.wav"></audio>
-    <audio data-key="s" src="sounds/hihat.wav"></audio>
-    <audio data-key="d" src="sounds/kick.wav"></audio>
-    <audio data-key="f" src="sounds/openhat.wav"></audio>
-    <audio data-key="g" src="sounds/boom.wav"></audio>
-    <audio data-key="h" src="sounds/ride.wav"></audio>
-    <audio data-key="j" src="sounds/snare.wav"></audio>
-    <audio data-key="k" src="sounds/tom.wav"></audio>
-    <audio data-key="l" src="sounds/tink.wav"></audio>
+    <!-- Audio Sounds -->
 
-    <script></script>
+    <!-- Crash -->
+    <audio
+      data-key="q"
+      src="sounds/WAVBVKERY - Acoustic Drum Samples/Cymbals/Crash/Acoustic Crash 01.wav"
+    ></audio>
+    <!-- High TOM -->
+    <audio
+      data-key="w"
+      src="sounds/WAVBVKERY - Acoustic Drum Samples/Toms/Tom High/Acoustic High Tom 01.wav"
+    ></audio>
+    <!-- Mid Tom -->
+    <audio
+      data-key="e"
+      src="sounds/WAVBVKERY - Acoustic Drum Samples/Toms/Tom Mid/Acoustic Mid Tom 01.wav"
+    ></audio>
+    <!-- Ride -->
+    <audio data-key="r" src="sounds/ride.wav"></audio>
+    <!-- Cowbell -->
+    <audio
+      data-key="t"
+      src="sounds/WAVBVKERY - Acoustic Drum Samples/Cymbals/Cowbell/Acoustic Cowbell 20.wav"
+    ></audio>
+    <!-- Stick -->
+    <audio
+      data-key="y"
+      src="sounds/WAVBVKERY - Acoustic Drum Samples/Sticks/Acoustic Sticks 02.wav"
+    ></audio>
+
+    <!-- Closed Hi-hat -->
+    <audio
+      data-key="a"
+      src="sounds/WAVBVKERY - Acoustic Drum Samples/Cymbals/Hi-Hat/Closed/Acoustic Closed Hat 02.wav"
+    ></audio>
+    <!-- Open Hi Hat -->
+    <audio
+      data-key="s"
+      src="sounds/WAVBVKERY - Acoustic Drum Samples/Cymbals/Hi-Hat/Open/Acoustic Open Hat 03.wav"
+    ></audio>
+
+    <!-- Snare -->
+    <audio
+      data-key="d"
+      src="sounds/WAVBVKERY - Acoustic Drum Samples/Snare/Acoustic Snare 01.wav"
+    ></audio>
+    <audio
+      data-key="f"
+      src="sounds/WAVBVKERY - Acoustic Drum Samples/Snare/Acoustic Snare 01.wav"
+    ></audio>
+
+    <!-- Floor Tom -->
+    <audio
+      data-key="g"
+      src="sounds/WAVBVKERY - Acoustic Drum Samples/Toms/Tom Low/Acoustic Tom Low 03.wav"
+    ></audio>
+
+    <!-- Clap -->
+    <audio data-key="h" src="sounds/clap.wav"></audio>
+
+    <!-- Boom -->
+    <audio data-key="z" src="sounds/boom.wav"></audio>
+    <!-- Tink -->
+    <audio data-key="x" src="sounds/tink.wav"></audio>
+
+    <!-- Kick -->
+    <audio
+      data-key="c"
+      src="sounds/WAVBVKERY - Acoustic Drum Samples/Kick/Acoustic Kick 25.wav"
+    ></audio>
+    <audio
+      data-key="v"
+      src="sounds/WAVBVKERY - Acoustic Drum Samples/Kick/Acoustic Kick 25.wav"
+    ></audio>
+    <footer class="footer">
+      <small>&copy;2024 Brancode Drum-Kit | All rights reserved</small>
+    </footer>
   </body>
 </html>

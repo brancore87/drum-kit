@@ -1,20 +1,41 @@
 html {
   font-size: 10px;
-  background: url("./background.jpg") bottom center;
+  background: url("./images/background.jpg") bottom center;
   background-size: cover;
+  min-height: 100vh;
 }
 
 body,
 html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.title__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px 0px;
+}
+
+.title {
+  font-weight: bold;
+  text-shadow: 5px 15px 5px black;
+  color: white;
+  font-size: 3rem;
+}
+
+.title__logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
 }
 
 .keys {
-  display: flex;
-  flex: 1;
-  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px 80px 80px;
+  column-gap: 5rem;
   align-items: center;
   justify-content: center;
 }
@@ -31,6 +52,7 @@ html {
   color: white;
   background: rgba(0, 0, 0, 0.4);
   text-shadow: 0 0 0.5rem black;
+  cursor: crosshair;
 }
 
 .playing {
@@ -49,4 +71,14 @@ kbd {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   color: #ffc600;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  color: white;
 }
